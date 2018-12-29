@@ -61,3 +61,53 @@ Rekurzivni odnos se ostvaruje preko tabele Proizvod, jer postoji proizvodi koji 
 \end{figure}
 
 \clearpage
+
+\section{Upiti}
+
+\subsection{PROGRAM 1.c}
+Sadrži sledeće upite za prikaz stanja:
+
+select * from Porudzbina;
+
+select * from Dokument;
+
+select * from Izradjuje;
+\newline
+Dok za menjanje stanja:
+
+insert into Porudzbina(Kupac\_idKupac, DatumPorudzbine) values
+
+(idKupca,Datum)
+\newline
+Ovo povlači triger koji pronalazi odgovarajući id za unetu Porudzbinu, popunjava roditeljsku tabelu Dokument i tabelu Izradjuje, koja nam govori koji korisnik korisnik je učestvovao u izradi odredjenog dokumenta.
+\newline
+Nakon toga se preko nove konekcije sa drugim korisnikom (pera, ranije nikola korisnik) vrši naredba ažuriranja datuma pristizanja porudzbine.
+
+update Porudzbina set DatumPorudzbine = \"datum\" where idPorudzbina = \"idPorudzbine\");
+\newline
+Povlači se triger koji u tabeli Dokument menja korisnika koji je izvršio poslednju izmenu, dodaje u tabelu Izradjuje novog korisnika.
+
+\subsection{PROGRAM 2.c}
+Sadrži sledeće upite za prikaz stanja:
+
+select * from Proizvod;
+
+select * from Stavka;
+
+select idPonuda,Porudzbina\_idPorudzbina,Cena,Popust,Prodajna\_cena from Ponuda;
+\newline
+Dok za menjanje stanja:
+
+insert into Stavka(idDokumenta,Proizvodi\_idProizvodi,Kolicina)
+
+values (idDokumenta,idProizvoda,kolicina);
+\newline
+Ovo povlači triger koji računa cenu te stavke na osnovu količine i cene proizvoda. Dalje triger ažurira odgovarajući red u tabeli Ponuda, formira cenu na osnovu zbira svih stavki, i formira prodajnu cenu sa uračunatim popustom.
+\newline
+Pored ove tu je i naredba:
+
+UPDATE Ponuda SET Popust = \"NoviPopust\" WHERE idPonuda =
+
+\"idPonuda\";
+\newline
+Vrši ažuriranje popusta i poziva se triger koji ažurira prodajnu cenu na osnovu novog popusta.
