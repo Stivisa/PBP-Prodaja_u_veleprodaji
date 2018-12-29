@@ -1,6 +1,6 @@
-1,Nikola Stojevic,2018-01-01,MATF,Magacioner,30000
-2,Marta Martinovic,2018-02-02,Veterinarski fakultet,Komercijalista,60000
-3,Jovana Jovanovic,2018-03-03,Veterinarski fakultet,Komercijalista,60000
-4,Petar Petrovic,2018-04-04,FON,Menadzer,80000
-5,Milan Milovanovic,2018-05-05,Veterinarski fakultet,Komercijalista,60000
-6,Jelena Jelenovic,2018-06-06,FON,Menadzer,80000
+1,Nikola Stojevic,2018-01-01,MATF,Magacioner,30000,nikola@localhost
+2,Marta Martinovic,2018-02-02,Veterinarski fakultet,Komercijalista,60000,
+3,Jovana Jovanovic,2018-03-03,Veterinarski fakultet,Komercijalista,60000,
+4,Pera Peric,2018-04-04,FON,Menadzer,80000,pera@localhost
+5,Milan Milovanovic,2018-05-05,Veterinarski fakultet,Komercijalista,60000,
+6,Jelena Jelenovic,2018-06-06,FON,Menadzer,80000,

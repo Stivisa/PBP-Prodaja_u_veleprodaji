@@ -21,9 +21,6 @@ LOAD DATA LOCAL INFILE 'veleprodaja/otpremnica.txt' INTO TABLE Otpremnica
 LOAD DATA LOCAL INFILE 'veleprodaja/faktura.txt' INTO TABLE Faktura
   FIELDS TERMINATED BY ','; 
   
-LOAD DATA LOCAL INFILE 'veleprodaja/izradjuje.txt' INTO TABLE Izradjuje
-  FIELDS TERMINATED BY ',';
-  
 LOAD DATA LOCAL INFILE 'veleprodaja/proizvod.txt' INTO TABLE Proizvod
   FIELDS TERMINATED BY ',';
   

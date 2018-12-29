@@ -6,14 +6,22 @@ CFLAGS	= -g -Wall `mysql_config --cflags --libs`
 
 progs: $(PROGS)
 
-all: create insert $(PROGS)
+all: create insert compile1 compile2
 
 create:
-	sudo mysql -u root -proot -D mysql <veleprodaja.sql
+	mysql -u nikola -pnikola -D mysql <veleprodaja.sql
 
 insert:
-	sudo mysql -u root -proot -D mysql <insert.sql
+	mysql -u nikola -pnikola -D mysql <insert.sql
+	
+compile1:
 
+	gcc 1.c -o 1 $(CFLAGS)
+	
+compile2:
+
+	gcc 2.c -o 2 $(CFLAGS)
+	
 beauty:
 	-indent $(PROGS).c
 
